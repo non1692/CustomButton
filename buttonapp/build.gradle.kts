@@ -51,7 +51,7 @@ publishing {
             url = uri("https://maven.pkg.github.com/non1692/CustomButton")
             credentials {
                 username = "non1692"
-                password = "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"
+                password = "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"
             }
         }
     }

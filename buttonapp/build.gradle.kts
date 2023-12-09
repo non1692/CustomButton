@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("maven-publish")
 }
 
 android {
@@ -29,6 +30,30 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+}
+
+publishing {
+    publications {
+
+        register<MavenPublication>("release") {
+            groupId = "com.softtek.buttonapp"
+            artifactId = "custombutton"
+            version = "1.0.1-alpha"
+            artifact ("$buildDir/outputs/aar/buttonapp-release.aar")
+        }
+    }
+
+    repositories {
+        maven {
+            name = "CustomButton"
+            url = uri("https://maven.pkg.github.com/non1692/CustomButton")
+            credentials {
+                username = "non1692"
+                password = "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"
+            }
+        }
     }
 
 }

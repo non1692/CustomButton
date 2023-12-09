@@ -65,22 +65,22 @@ class CustomButton : AppCompatButton {
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    private fun setCustomFont(fontName: Int): Typeface? {
+    private fun setCustomFont(fontName: TypeFont): Typeface? {
 
         val typeface = when (fontName) {
-            0 -> {
+            TypeFont.REGULAR -> {
                 resources.getFont(R.font.garnett_regular)
             }
 
-            1 -> {
+            TypeFont.REGULAR_ITALIC -> {
                 resources.getFont(R.font.garnett_regular_italic)
             }
 
-            2 -> {
+            TypeFont.SEMI_BOLD -> {
                 resources.getFont(R.font.garnett_semibold)
             }
 
-            3 -> {
+            TypeFont.SEMI_BOLD_ITALIC -> {
                 resources.getFont(R.font.garnett_semibold_italic)
             }
 
@@ -91,22 +91,22 @@ class CustomButton : AppCompatButton {
         return typeface
     }
 
-    private fun setCustomFont(context: Context, fontName: Int): Typeface? {
+    private fun setCustomFont(context: Context, fontName: TypeFont): Typeface? {
 
         val typeface = when (fontName) {
-            0 -> {
+            TypeFont.REGULAR -> {
                 ResourcesCompat.getFont(context, R.font.garnett_regular)
             }
 
-            1 -> {
+            TypeFont.REGULAR_ITALIC -> {
                 ResourcesCompat.getFont(context, R.font.garnett_regular_italic)
             }
 
-            2 -> {
+            TypeFont.SEMI_BOLD -> {
                 ResourcesCompat.getFont(context, R.font.garnett_semibold)
             }
 
-            3 -> {
+            TypeFont.SEMI_BOLD_ITALIC -> {
                 ResourcesCompat.getFont(context, R.font.garnett_semibold_italic)
             }
 
@@ -134,9 +134,9 @@ class CustomButton : AppCompatButton {
                 button.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15F)
                 button.elevation = 8.0F
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    button.typeface = setCustomFont(2)
+                    button.typeface = setCustomFont(TypeFont.SEMI_BOLD)
                 } else {
-                    button.typeface = setCustomFont(button.context, 2)
+                    button.typeface = setCustomFont(button.context, TypeFont.SEMI_BOLD)
                 }
             }
 
@@ -154,9 +154,9 @@ class CustomButton : AppCompatButton {
                 button.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15F)
                 button.elevation = 8.0F
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    button.typeface = setCustomFont(2)
+                    button.typeface = setCustomFont(TypeFont.SEMI_BOLD)
                 } else {
-                    button.typeface = setCustomFont(button.context, 2)
+                    button.typeface = setCustomFont(button.context, TypeFont.SEMI_BOLD)
                 }
             }
 
@@ -174,13 +174,17 @@ class CustomButton : AppCompatButton {
                 button.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15F)
                 button.elevation = 8.0F
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    button.typeface = setCustomFont(3)
+                    button.typeface = setCustomFont(TypeFont.REGULAR)
                 } else {
-                    button.typeface = setCustomFont(button.context, 3)
+                    button.typeface = setCustomFont(button.context, TypeFont.REGULAR)
                 }
             }
 
         }
+    }
+
+    enum class TypeFont {
+        REGULAR, REGULAR_ITALIC, SEMI_BOLD, SEMI_BOLD_ITALIC
     }
 
 }

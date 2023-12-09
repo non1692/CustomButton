@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Styled">
+        <attr name="styledView" format="enum">
+            <enum name="standar" value="0" />
+            <enum name="lineal" value="1" />
+            <enum name="radial" value="2" />
+        </attr>
+
+      <attr name="styledButton" format="enum">
+        <enum name="standard" value="0" />
+        <enum name="dark" value="1" />
+        <enum name="light" value="2" />
+      </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="CustomText">
+        <attr name="customFont" format="enum">
+            <enum name="garnett_regular" value="0" />
+            <enum name="garnett_regular_italic" value="1" />
+            <enum name="garnett_semibold" value="2" />
+            <enum name="garnett_semibold_italic" value="3" />
+        </attr>
+    </declare-styleable>
+
+</resources>

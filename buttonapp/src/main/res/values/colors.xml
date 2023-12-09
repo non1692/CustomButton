@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="color_button_focused_standard">#4F6387</color>
+    <color name="color_button_pressed_standard">#DEE0E3</color>
+    <color name="color_button_default_standard">#035CF7</color>
+
+    <color name="color_button_focused_light">#035CF7</color>
+    <color name="color_button_pressed_light">#4F6387</color>
+    <color name="color_button_default_light">@color/white</color>
+
+</resources>

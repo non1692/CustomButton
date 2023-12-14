@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.softtek.buttonapp.CustomButton
+ <!--   <com.softtek.buttonapp.CustomButton
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:styledButton="dark"
-        tools:text="test esto es un boton cool" />
+        tools:text="test esto es un boton cool" />-->
 
     <Button
         android:id="@+id/button2"
@@ -40,6 +40,6 @@
         android:text="Button Large Demo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

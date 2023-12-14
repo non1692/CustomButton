@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.softtek.buttonapp"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 24
@@ -34,13 +34,18 @@ android {
 
 }
 
+/**
+ * Publicación de paquete
+ */
+/*
 publishing {
     publications {
 
         register<MavenPublication>("release") {
+            //groupId = "com.softtek.buttonapp"
             groupId = "com.softtek.buttonapp"
             artifactId = "custombutton"
-            version = "1.0.1-alpha"
+            version = "1.0.7"
             artifact ("$buildDir/outputs/aar/buttonapp-release.aar")
         }
     }
@@ -57,7 +62,23 @@ publishing {
     }
 
 }
+*/
+/**
+ * Publicación de release
+ */
+publishing{
+    publications{
+        register<MavenPublication>("release") {
+            groupId = "com.github.non1692"
+            artifactId = "CustomButton"
+            version = "2.0.0"
 
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
+}
 dependencies {
 
     implementation("androidx.core:core-ktx:1.9.0")

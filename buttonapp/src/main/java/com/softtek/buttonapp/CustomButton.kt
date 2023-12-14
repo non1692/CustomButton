@@ -65,7 +65,7 @@ class CustomButton : AppCompatButton {
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    private fun setCustomFont(fontName: TypeFont): Typeface? {
+    private fun setCustomFont(fontName: TypeFont): Typeface {
 
         val typeface = when (fontName) {
             TypeFont.REGULAR -> {
@@ -82,10 +82,6 @@ class CustomButton : AppCompatButton {
 
             TypeFont.SEMI_BOLD_ITALIC -> {
                 resources.getFont(R.font.garnett_semibold_italic)
-            }
-
-            else -> {
-                resources.getFont(R.font.garnett_regular)
             }
         }
         return typeface
@@ -110,9 +106,6 @@ class CustomButton : AppCompatButton {
                 ResourcesCompat.getFont(context, R.font.garnett_semibold_italic)
             }
 
-            else -> {
-                ResourcesCompat.getFont(context, R.font.garnett_regular)
-            }
         }
         return typeface
     }
